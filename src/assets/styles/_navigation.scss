@@ -1,0 +1,9 @@
+#navigation {
+    align-items: center;
+    justify-content: space-evenly;
+
+    .navigation-icon {
+        width: 10%;
+        transform: translateX(-100%);
+    }
+}

@@ -1,0 +1,65 @@
+---
+permalink: /
+title: Archer.ninja
+jobs:
+  - title: Rebel Interactive Group
+    details: 535 W Main St Cheshire, CT 06410
+    bullets:
+      - description: Implemented best practice security measure for zero dollars and protected employee data daily.
+      - description: Researched and proposed various MDM solutions to manage a growing fleet.
+      - description: Handled hardware and software issues across operating environments daily. 
+  - title: ABEX Distribution (Amazon Affiliate)
+    details: 71 Horizon Dr Bristol, CT 06010
+    bullets:
+      - description: Safely delivered thousands of dollars of retail goods daily.
+      - description: Observed stringent security and health protocols introduced rapidly in the height of the 2019 - 2020 pandemic.
+      - description: Identified and built a custom automation solution to save 20% of morning prep time for daily route management.
+  - title: Telephonic Interviewer (Quinnipiac)
+    details: 60 W Woods Rd Hamden, CT 06518
+    bullets:
+      - description: Conducted telephonic interviews about interesting subjects in the news.
+  - title: Staples
+    details:  544 Straits Turnpike Watertown, CT 06795
+    bullets:
+      - description: Assisted customers with various systems with troubleshooting and management.
+      - description: Built rapport with customers to grow sale margins daily with appropriate additional products.
+      - description: Received recognition for sale growth while a member of Bristol, CT branch.
+  - title: Produce Associate
+    details: 27 Kent Green Blvd Kent, CT 06757
+    bullets:
+      - description: Managed and rotated stock daily to ensure fresh product was available.
+      - description: Assisted in goods acquisition to help customer receive the best outcome for daily nutrition.
+  - title: Infantry (USMC)
+    details: 
+  
+---
+
+<div id="home">
+  <section class="row">
+      <img src="/assets/images/placeholder-image.jpg" alt="wrong path"/>
+      <div>
+        <p>
+            Welcome to Archer.ninja! Why a ninja domain? Because it was available,
+            and ninjas are cooler than pirates.
+            <br/><br/>
+            Now that I've lost half my potential readers, I'm Matt Archer;
+            junior front-end developer, sole in-house IT provider for a SMB
+            in Connecticut, and a long time nerd. Read on to learn more! If
+            you want to skip the niceties, contact me to help with your web
+            project.
+        </p>
+        <p>
+          <a href="/contact" title="contact me" class="contact-button btn">Contact</a>
+        </p>
+      </div>
+  </section>
+
+  <hr>
+
+  <article class="history">
+    {% set list = jobs %}
+    {% for list in jobs %}
+      {% include "partials/filter-list.njk" %}
+    {% endfor %}
+  </article>
+</div>

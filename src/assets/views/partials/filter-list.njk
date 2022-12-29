@@ -1,0 +1,13 @@
+<section>
+    <h2 class="list-title">{{ list.title }}</h2>
+    <hr/>
+    <p class="list-details">
+        {{ list.details }}
+    </p>
+    <hr/>
+    <ul class="list-bullets">
+        {% for item in list.bullets %}
+        <li>{{ item.description }}</li>
+        {% endfor %}
+    </ul>
+</section>

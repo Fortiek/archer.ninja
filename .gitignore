@@ -1,6 +1,13 @@
-#Mac files
-.DS_Store
-
-.env
+# dependencies installed by npm
 node_modules
-_site
+
+# build artifacts
+public
+.cache/
+
+# secrets and errors
+.env
+.log
+
+# macOS related files
+.DS_Store
