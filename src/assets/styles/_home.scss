@@ -1,21 +1,45 @@
 .row {
     justify-content: space-between;
     padding: 0 2em;
+    display: flex;
+        
+    @media screen and (max-width: 750px) {
+        flex-direction: column;
+        width: 100%;
+        
+        div {
+        padding: 0 !important;
+        }
+    }
+    
+    div > p {
+        margin: 1em 0;
+    }
 
     p {
+        padding: 1rem 1rem;
+
         .contact-button {
             background-color: var(--color-light);
+            color: #cf0200;
             border: 1px solid black;
             border-radius: 10%;
             padding: 1em;
             margin-top: 1em;
+            transition: background-color 1s, color 1s;
+
+            &:hover {
+                background-color: rgba(80, 80, 80, .8);
+                color: var(--color-light);
+            }
+        }
+
+        &.centered {
+            text-align: center;
         }
     }
-
-    * {
-        padding: 0 2em;
-    }
 }
+
 img {
     border-radius: 25%;
 }

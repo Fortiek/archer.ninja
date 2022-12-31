@@ -5,6 +5,7 @@
 @import "reset";
 @import "branding";
 @import "home";
+@import "history";
 
 /**
  * ZeroPoint starter styling
@@ -23,15 +24,17 @@ a {
   max-width: var(--container-width);
   margin: calc(var(--unit) * 5) auto;
 
-  .row {
-    display: flex;
-  }
 }
 
 #navigation {
   display: flex;
   border-bottom: 1px solid var(--color-light);
   margin: var(--unit);
+}
+
+#page-header {
+  padding: 0 0 2rem 2rem;
+  margin-bottom: calc(var(--unit) * 2);
 }
 
 #footer {
@@ -43,6 +46,10 @@ a {
 
 hr {
   border-color: var(--color-light);
+}
+
+h1, h2 {
+  color: var(--color-primary);
 }
 
 img {

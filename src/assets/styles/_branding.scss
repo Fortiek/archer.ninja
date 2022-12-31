@@ -10,6 +10,8 @@
   @media (prefers-color-scheme: dark) {
     --color-text: #fff;
     --color-background: #222;
+    --color-light: #888;
+    --color-primary: #3fccff;
   }
 
   /**
@@ -17,6 +19,9 @@
   */
   --unit: 1rem;
   --container-width: 80%;
+  @media screen and (max-width: 750px) {
+    --container-width: 90%;
+  }
 
   /**
     Fonts
