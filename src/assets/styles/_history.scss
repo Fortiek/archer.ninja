@@ -2,7 +2,27 @@
     border: 1px solid var(--color-text);
     margin: 1rem 0;
 
-    h2, p {
+    h2 {
+        padding: 1rem;
+        cursor: pointer;
+        transition: 0.4s;
+
+        &:hover {
+            background-color: rgba(80, 80, 80, .8);
+            color: var(--color-light);
+        }
+    }
+
+    .collapse {
+        display: none;
+        overflow: hidden;
+    }
+
+    .active {
+        display: block;
+    }
+
+    p {
         padding: 1rem;
     }
 }

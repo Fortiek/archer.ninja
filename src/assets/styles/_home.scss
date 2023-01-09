@@ -34,12 +34,18 @@
             }
         }
 
-        &.centered {
-            text-align: center;
-        }
+        
     }
+}
+
+.centered {
+    text-align: center;
 }
 
 img {
     border-radius: 25%;
+}
+
+h1, h2, h3 {
+    padding: calc(var(--unit) * 2);
 }
