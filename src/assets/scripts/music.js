@@ -1,3 +1,1 @@
-//spotify connector
-
-const spotify = fetch('https://api.spotify.com/');
+//TODO: Make api calls work, implement spotify on site to let people listen to their tunes.

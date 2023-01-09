@@ -29,3 +29,14 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+fetch('https://www.mmobomb.com/api1/latestnews', {
+  method: 'GET',
+  mode: 'no-cors'
+}).then(msg =>{
+    return msg.json();
+  }).then(data =>{
+    console.log(data);
+  }).catch(err =>{
+    console.log(`ERROR: ${err.message}`);
+  });
