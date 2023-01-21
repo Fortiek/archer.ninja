@@ -46,6 +46,7 @@ const templateLanguages = require('./src/config/templateLanguages');
 const fs = require("fs");
 const chalk = require("chalk");
 const htmlmin = require("html-minifier");
+const fetch = require("@11ty/eleventy-fetch");
 
 /**
  * Eleventy configuration

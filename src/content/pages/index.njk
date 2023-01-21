@@ -38,7 +38,6 @@ jobs:
       - description: Recognized for efforts and conduct above and beyond the call of duty by company senior leadership and affiliate units. 
   
 ---
-
 <div id="home">
   <section class="row">
       <img src="/assets/images/placeholder-image.jpg" alt="wrong path"/>
@@ -59,10 +58,30 @@ jobs:
         </p>
       </div>
   </section>
+  <section class="news-section">
+    <h2>Things I Find Interesting</h2>
+    <p>
+      I tend to spend most of my time on work, but when I have some breathing room, I like to keep up on some news in certain areas.
+      If you happen to be the same level of nerd as me, or in the ballpark, maybe you'll find some of this content useful!
+    </p>
+        {# {{ mmoStories | dump }} #}
+    <ul class="cards api-response">
+      {% for item in mmoStories %}
+        {% if loop.index0 < 6 %}
+          <a href="{{item.profile_url}}" target="_blank">
+            <li>
+              <p>{{item.title}}</p>
+              <p>{{item.short_description}}</p>
+            </li>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
 
   <article class="history">
     <h2 class="centered">Where I've Worked</h2>
-    {% set list = jobs %}
+    {# {% set list = jobs %} #}
     {% for list in jobs %}
       {% include "partials/filter-list.njk" %}
     {% endfor %}

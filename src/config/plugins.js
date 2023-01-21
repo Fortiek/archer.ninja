@@ -53,5 +53,5 @@ module.exports = {
 
     // Add the plugin to the Eleventy config
     eleventyConfig.addPlugin(plugin, config)
-  },
+  }
 }
