@@ -19,3 +19,9 @@
         }
     }
 }
+
+@media screen and (max-width: 450px) {
+    .news-section ul a {
+        width: 100% !important;
+    }           
+}
