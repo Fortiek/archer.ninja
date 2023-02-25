@@ -1,0 +1,27 @@
+.news-section{
+    ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5%;
+
+        a {
+            text-decoration: none;
+            width: 45%;
+            border: 1px solid var(--color-primary);
+            margin: var(--unit) 0;
+            padding: var(--unit);
+
+            >li p:first-child {
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .news-section ul a {
+        width: 100% !important;
+    }           
+}
