@@ -2,6 +2,12 @@
 permalink: /
 title: Archer.ninja
 jobs:
+  - title: Protedyne Corp. (LabCorp)
+    details: Robots Rule!
+    bullets:
+      - description: Assumed the role of DevOps engineer from three Senior Software Engineers that instituted company best practices.
+      - description: Grew automated reporting capabilities with Linux server scripts that managed a fleet of machines across the continental USA.
+      - description: Created, tested, and deployed unit bring-up procedure for the company's newest product within 3 months, then iterated its capabilites as needs changed.
   - title: Rebel Interactive Group
     details: Full service digital marketing agency
     bullets:
@@ -77,6 +83,26 @@ jobs:
         {% endif %}
       {% endfor %}
     </ul>
+    {# {{ newsApi | dump }} #}
+
+    {# Throw in the generic newsApi responses with everything/technology category #}
+    <article>
+      <h2>General Tech News:</h2>
+      <ul class="cards api-response">
+        {% for article in newsApi.articles %}
+          {% if loop.index0 < 10 %}
+            <a href="{{article.url}}" target="_blank" title="{{article.title}}">
+              <li>
+                <h4>{{article.title}}</h4>
+                <p class="description">
+                  {{article.description}}
+                </p>
+              </li>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </article>
   </section>
 
   <article class="history">
