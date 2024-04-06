@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: Archer.ninja
+title: Archers.space
 jobs:
   - title: Protedyne Corp. (LabCorp)
     details: Robots Rule!
@@ -49,9 +49,8 @@ jobs:
       <img src="/assets/images/placeholder-image.jpg" alt="wrong path"/>
       <div>
         <p>
-            Welcome to Archer.ninja! Why a ninja domain? Because it was available,
-            and ninjas are cooler than pirates.
-            <br/><br/>
+            Welcome to Archers.space! This is a work in progress, should be more in progress now that it's available at a common domain...
+            
             Below, you can see some of my work history, and above I'll be linking other pet projects. 
             Currently I'm working as the in-house IT provider for a SMB in Connecticut that does full spectrum digital
             marketing. If you're a company representative that could use high-quality custom marketing engagement, see
@@ -88,6 +87,7 @@ jobs:
     {# Throw in the generic newsApi responses with everything/technology category #}
     <article>
       <h2>General Tech News:</h2>
+      <p>Of note: This is a use of the <a href="https://newsapi.org/" title="News API home page">NewsApi</a> to grab tech news. It's the most recent addition and needs some refinement; currently, it grabs the top 10 search results pertaining to tech news on page BUILD, not serve, and would be better implemented as a front-end interactive piece that makes request based on user input for what topics they want to see, but hey, we'll get there.
       <ul class="cards api-response">
         {% for article in newsApi.articles %}
           {% if loop.index0 < 10 %}
