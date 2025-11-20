@@ -11,7 +11,7 @@ async function fetchNews () {
     // First endpoint
     const newsUrl = `https://newsapi.org/v2`;
     const key = `${process.env.NEWS_API}`;
-    // this.category != "" ? this.category : "everything"; <- not working without a function call
+    
     const category = "everything";
     const reqHeaders = {
         "headers": {
@@ -21,7 +21,7 @@ async function fetchNews () {
     }
 
     // Console log test ftw
-    let res = await fetch(`${newsUrl}/${category}?q=technology`, reqHeaders);
+    let res = await fetch(`${newsUrl}/${category}?q=technology&q=entertainment&q=video%20games`, reqHeaders);
     let data = await res.json();
 
 

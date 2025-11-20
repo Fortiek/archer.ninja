@@ -87,13 +87,20 @@ jobs:
     {# Throw in the generic newsApi responses with everything/technology category #}
     <article>
       <h2>General Tech News:</h2>
-      <p>Of note: This is a use of the <a href="https://newsapi.org/" title="News API home page">NewsApi</a> to grab tech news. It's the most recent addition and needs some refinement; currently, it grabs the top 10 search results pertaining to tech news on page BUILD, not serve, and would be better implemented as a front-end interactive piece that makes request based on user input for what topics they want to see, but hey, we'll get there.
+      <p>Of note: This is a use of the <a href="https://newsapi.org/" title="News API home page">NewsApi</a> 
+      to grab tech news. It's the most recent addition and needs some refinement; currently, 
+      it grabs the top 10 search results pertaining to tech news on page BUILD, 
+      not serve, and would be better implemented as a front-end interactive 
+      piece that makes request based on user input for what topics they want to 
+      see, but hey, we'll get there.</p>
       <ul class="cards api-response">
         {% for article in newsApi.articles %}
           {% if loop.index0 < 10 %}
             <a href="{{article.url}}" target="_blank" title="{{article.title}}">
               <li>
                 <h4>{{article.title}}</h4>
+                <h5 class="news-api-pubtime">{{article.publishedAt}}</h5>
+                <img alt="Article response thumbnail" src="{{article.urlToImage}}"/>
                 <p class="description">
                   {{article.description}}
                 </p>
